@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ChatActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#E4E4E4"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_escrita_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@android:color/white"
+            android:hint="Escreva sua mensagem"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:inputType="textCapSentences|textShortMessage"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/texto_conversa" />
+
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@color/principal"
+            android:text="Send"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_layout_bar"
+        android:layout_below="@+id/dark_divider"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="2dp"
+        tools:itemCount="20"
+        tools:listitem="@layout/card_mensagem_recebida" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/principal"
+        android:id="@+id/dark_divider"/>
+
+    <ImageView
+        android:id="@+id/img_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_voltar"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/fm_contato"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="80dp"
+        android:padding="10dp"
+        >
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/foto_perfil"
+        android:layout_marginTop="10dp"
+
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="João Carneiro"
+            android:textColor="@color/white"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Online"
+            android:textColor="@color/white"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="30dp"
+            />
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/ic_online"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="50dp"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

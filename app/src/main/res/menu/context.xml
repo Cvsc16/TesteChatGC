@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_marcar_lida"
+        android:title="Marcar como Lida" />
+    <item
+        android:id="@+id/menu_marcar_nao_lida"
+        android:title="Marcar como Não Lida" />
+</menu>
